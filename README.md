@@ -16,16 +16,6 @@ Claude: Weesp is at 52.31, 5.04. Saturday: feels-like 9 to 12 C, wind 10 km/h EN
 
 ## What it does
 
-Key:
-
-```mermaid
-flowchart LR
-    K1(["A person decides or acts"]):::human ~~~ K2["A step a system runs"]:::sys ~~~ K3["`**Claude** skill or agent: a step Claude runs`"]:::sys ~~~ K4["What comes out"]:::out
-    classDef sys fill:#1f3a5f,stroke:#7aa2d8,color:#ffffff
-    classDef human fill:#6b4514,stroke:#e0a95a,color:#ffffff
-    classDef out fill:#1e4d3a,stroke:#6fcf97,color:#ffffff
-```
-
 ```mermaid
 %%{init: {"flowchart": {"wrappingWidth": 600, "nodeSpacing": 30, "rankSpacing": 32}}}%%
 flowchart TB
@@ -47,6 +37,8 @@ flowchart TB
     classDef out fill:#1e4d3a,stroke:#6fcf97,color:#ffffff
     style S fill:transparent,stroke:#7f8c9a,stroke-dasharray:4 3
 ```
+
+<img src="assets/diagram-key.svg" alt="Key: rounded amber, a person decides or acts; navy, a step a system runs; Claude in bold, a step Claude runs; green, what comes out">
 
 1. `geocoding-mcp` turns a city name or a postal code into coordinates, country and timezone, up to five matches, and looks a location up by its Open-Meteo id.
 2. `sun-weather-mcp` gives sunrise and sunset for a day or a range of up to 16 days, and a forecast of 1 to 7 days where every day is one row: temperature and feels-like (min, max, avg), wind and gusts, the dominant wind direction as a compass point, rain total and chance, cloud, humidity.
