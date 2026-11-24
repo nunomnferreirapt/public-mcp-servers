@@ -38,6 +38,8 @@ flowchart TB
     style S fill:transparent,stroke:#7f8c9a,stroke-dasharray:4 3
 ```
 
+<img src="assets/diagram-key.svg" alt="Key: rounded amber, a person decides or acts; navy, a step a system runs; Claude in bold, a step Claude runs; green, what comes out">
+
 1. `geocoding-mcp` turns a city name or a postal code into coordinates, country and timezone, up to five matches, and looks a location up by its Open-Meteo id.
 2. `sun-weather-mcp` gives sunrise and sunset for a day or a range of up to 16 days, and a forecast of 1 to 7 days where every day is one row: temperature and feels-like (min, max, avg), wind and gusts, the dominant wind direction as a compass point, rain total and chance, cloud, humidity.
 3. `air-quality-mcp` gives current air quality with the European AQI label, a 1 to 7 day forecast and a historical range folded to daily rows, a pollen forecast (grass, birch, alder, mugwort, ragweed, olive) as daily peaks, the UV peak per day with its risk level, and an AQI breakdown that names the pollutant driving the index.
